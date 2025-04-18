@@ -97,4 +97,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // 访问计数器逻辑
+    const visitCountElement = document.getElementById('visitCount');
+    if (visitCountElement) {
+        // 检查是否支持 localStorage
+        if (typeof(Storage) !== "undefined") {
+            // 获取当前访问次数
+            let count = localStorage.getItem('visitCount') || 0;
+            // 增加访问次数
+            count++;
+            // 更新 localStorage
+            localStorage.setItem('visitCount', count);
+            // 显示访问次数
+            visitCountElement.textContent = count;
+        } else {
+            // 如果浏览器不支持 localStorage，则显示消息
+            console.log('Your browser does not support Web Storage');
+        }
+    }
+
+    // 为所有链接添加点击事件监听器
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', function() {
+            // 检查链接是否指向当前页面
+            if (this.getAttribute('href') === 'index.html') {
+                // 获取当前访问次数
+                let count = localStorage.getItem('visitCount') || 0;
+                // 增加访问次数
+                count++;
+                // 更新 localStorage
+                localStorage.setItem('visitCount', count);
+            }
+        });
+    });
 });

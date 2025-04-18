@@ -764,7 +764,17 @@ footer {
     height: 100%;
     background-color: var(--border-color);
 }
-
+/* 计数器样式 */
+.counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
 .timeline-item {
     display: flex;
     justify-content: flex-end;
