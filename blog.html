@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Family Health Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Family Health Platform">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="users.html">User Groups</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero blog-hero">
+        <div class="container">
+            <h1>Our Blog</h1>
+            <p>Insights and tips for family wellness</p>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Posts</button>
+                <button class="tab-btn" data-category="fitness">Fitness</button>
+                <button class="tab-btn" data-category="nutrition">Nutrition</button>
+                <button class="tab-btn" data-category="mental">Mental Wellness</button>
+                <button class="tab-btn" data-category="parenting">Parenting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid" id="postsGrid">
+                <!-- Fitness Posts -->
+                <div class="post-card" data-category="fitness">
+                    <div class="post-image">
+                        <img src="images/blog1.jpg" alt="Blog Post 1">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Fitness</span>
+                        <span class="post-date">June 15, 2023</span>
+                        <h3>How to Create Family Fitness Routines</h3>
+                        <p>Discover fun and effective ways to get the whole family moving together.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card" data-category="fitness">
+                    <div class="post-image">
+                        <img src="images/blog2.jpg" alt="Blog Post 2">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Fitness</span>
+                        <span class="post-date">June 10, 2023</span>
+                        <h3>Low-Impact Exercises for Seniors</h3>
+                        <p>Gentle exercise routines that improve mobility and strength without strain.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Nutrition Posts -->
+                <div class="post-card" data-category="nutrition">
+                    <div class="post-image">
+                        <img src="images/blog3.jpg" alt="Blog Post 3">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Nutrition</span>
+                        <span class="post-date">June 5, 2023</span>
+                        <h3>Nutrition Tips for Busy Parents</h3>
+                        <p>Quick, healthy meal ideas that won't compromise on taste or nutrition.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card" data-category="nutrition">
+                    <div class="post-image">
+                        <img src="images/blog4.jpg" alt="Blog Post 4">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Nutrition</span>
+                        <span class="post-date">May 30, 2023</span>
+                        <h3>Plant-Based Meal Planning for Families</h3>
+                        <p>Delicious and nutritious plant-based recipes that the whole family will love.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Mental Wellness Posts -->
+                <div class="post-card" data-category="mental">
+                    <div class="post-image">
+                        <img src="images/blog5.jpg" alt="Blog Post 5">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Mental Wellness</span>
+                        <span class="post-date">May 25, 2023</span>
+                        <h3>Mental Wellness for the Whole Family</h3>
+                        <p>Practical mindfulness activities to reduce stress and improve family bonds.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card" data-category="mental">
+                    <div class="post-image">
+                        <img src="images/blog6.jpg" alt="Blog Post 6">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Mental Wellness</span>
+                        <span class="post-date">May 20, 2023</span>
+                        <h3>Managing Anxiety in Children</h3>
+                        <p>Simple techniques to help children cope with anxiety and build resilience.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Parenting Posts -->
+                <div class="post-card" data-category="parenting">
+                    <div class="post-image">
+                        <img src="images/blog7.jpg" alt="Blog Post 7">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Parenting</span>
+                        <span class="post-date">May 15, 2023</span>
+                        <h3>Postpartum Care: What New Mothers Need</h3>
+                        <p>Essential tips for physical and emotional recovery after childbirth.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="post-card" data-category="parenting">
+                    <div class="post-image">
+                        <img src="images/blog8.jpg" alt="Blog Post 8">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Parenting</span>
+                        <span class="post-date">May 10, 2023</span>
+                        <h3>Creating Healthy Habits for Kids</h3>
+                        <p>Strategies to instill lifelong healthy habits in children from a young age.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Author Section -->
+    <section class="featured-author">
+        <div class="container">
+            <h2 class="section-title">Featured Author</h2>
+            <div class="author-profile">
+                <div class="author-image">
+                    <img src="images/author.jpg" alt="Dr. Sarah Johnson">
+                </div>
+                <div class="author-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="author-title">Chief Wellness Officer</p>
+                    <p>Dr. Sarah Johnson is a renowned family health expert with over 15 years of experience in clinical nutrition and wellness coaching. As the founder of Family Health Platform, she combines her medical expertise with innovative technology to create comprehensive solutions for families.</p>
+                    <p>Follow Dr. Johnson for insights on family health, nutrition, and wellness trends.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest family wellness tips, recipes, and expert advice delivered to your inbox every week.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Family Health Platform">
+                    </div>
+                    <p>Empowering families to achieve holistic wellness together.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="users.html">User Groups</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and wellness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Family Health Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

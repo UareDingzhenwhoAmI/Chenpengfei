@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant-Based Meal Kit | Family Health Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Family Health Platform">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="users.html">User Groups</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Plant-Based Meal Kit</h1>
+            <p>Sustainable and delicious plant-based meal plans</p>
+        </div>
+    </section>
+
+    <!-- Meal Kit Form -->
+    <section class="meal-kit">
+        <div class="container">
+            <h2 class="section-title">Generate Your Meal Kit</h2>
+            <div class="meal-form">
+                <form id="mealForm">
+                    <div class="form-group">
+                        <label for="dietary-needs">Dietary Needs</label>
+                        <select id="dietary-needs" name="dietary-needs" required>
+                            <option value="">Select Dietary Needs</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="low-carb">Low-Carb</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="family-size">Family Size</label>
+                        <input type="number" id="family-size" name="family-size" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="favorite-ingredients">Favorite Ingredients (comma-separated)</label>
+                        <input type="text" id="favorite-ingredients" name="favorite-ingredients">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate Meal Kit</button>
+                </form>
+            </div>
+            <div class="meal-result" id="mealResult">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Family Health Platform">
+                    </div>
+                    <p>Empowering families to achieve holistic wellness together.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="users.html">User Groups</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and wellness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Family Health Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mealForm = document.getElementById('mealForm');
+            const mealResult = document.getElementById('mealResult');
+
+            if (mealForm) {
+                mealForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const dietaryNeeds = document.getElementById('dietary-needs').value;
+                    const familySize = document.getElementById('family-size').value;
+                    const favoriteIngredients = document.getElementById('favorite-ingredients').value;
+
+                    // Simple logic to generate a meal kit
+                    let mealKit = `
+                        <div class="result-card">
+                            <h3>Your Plant-Based Meal Kit</h3>
+                            <p><strong>Dietary Needs:</strong> ${dietaryNeeds}</p>
+                            <p><strong>Family Size:</strong> ${familySize}</p>
+                            <p><strong>Favorite Ingredients:</strong> ${favoriteIngredients}</p>
+                            <h4>Weekly Meal Plan:</h4>
+                            <ul>
+                                <li><strong>Monday:</strong> Quinoa salad with chickpeas and avocado</li>
+                                <li><strong>Tuesday:</strong> Lentil soup with whole grain bread</li>
+                                <li><strong>Wednesday:</strong> Stir-fried tofu with mixed vegetables</li>
+                                <li><strong>Thursday:</strong> Black bean tacos with corn salsa</li>
+                                <li><strong>Friday:</strong> Chickpea curry with brown rice</li>
+                                <li><strong>Saturday:</strong> Veggie pizza with whole wheat crust</li>
+                                <li><strong>Sunday:</strong> Smoothie bowl with fresh fruits</li>
+                            </ul>
+                            <h4>Shopping List:</h4>
+                            <ul>
+                                <li>Quinoa</li>
+                                <li>Chickpeas</li>
+                                <li>Lentils</li>
+                                <li>Tofu</li>
+                                <li>Black beans</li>
+                                <li>Fresh vegetables</li>
+                                <li>Fruits</li>
+                                <li>Whole grains</li>
+                            </ul>
+                        </div>
+                    `;
+
+                    mealResult.innerHTML = mealKit;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

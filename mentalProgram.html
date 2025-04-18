@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness Program | Family Health Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Family Health Platform">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="users.html">User Groups</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Mental Wellness Program</h1>
+            <p>Improve mental health for the whole family</p>
+        </div>
+    </section>
+
+    <!-- Mental Wellness Form -->
+    <section class="mental-wellness">
+        <div class="container">
+            <h2 class="section-title">Mental Wellness Assessment</h2>
+            <div class="wellness-form">
+                <form id="wellnessForm">
+                    <div class="form-group">
+                        <label for="stress-level">Current Stress Level (1-10)</label>
+                        <input type="range" id="stress-level" name="stress-level" min="1" max="10" required>
+                        <span id="stress-value">5</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="sleep-quality">Sleep Quality (1-10)</label>
+                        <input type="range" id="sleep-quality" name="sleep-quality" min="1" max="10" required>
+                        <span id="sleep-value">5</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mood">Current Mood</label>
+                        <select id="mood" name="mood" required>
+                            <option value="">Select Mood</option>
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="anxious">Anxious</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="stressed">Stressed</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Recommendations</button>
+                </form>
+            </div>
+            <div class="wellness-result" id="wellnessResult">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Family Health Platform">
+                    </div>
+                    <p>Empowering families to achieve holistic wellness together.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="users.html">User Groups</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and wellness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Family Health Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wellnessForm = document.getElementById('wellnessForm');
+            const wellnessResult = document.getElementById('wellnessResult');
+            const stressLevel = document.getElementById('stress-level');
+            const stressValue = document.getElementById('stress-value');
+            const sleepQuality = document.getElementById('sleep-quality');
+            const sleepValue = document.getElementById('sleep-value');
+
+            // Update stress level value
+            stressLevel.addEventListener('input', function() {
+                stressValue.textContent = this.value;
+            });
+
+            // Update sleep quality value
+            sleepQuality.addEventListener('input', function() {
+                sleepValue.textContent = this.value;
+            });
+
+            if (wellnessForm) {
+                wellnessForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const stress = stressLevel.value;
+                    const sleep = sleepQuality.value;
+                    const mood = document.getElementById('mood').value;
+
+                    // Simple logic to generate mental wellness recommendations
+                    let recommendations = `
+                        <div class="result-card">
+                            <h3>Your Mental Wellness Recommendations</h3>
+                            <p><strong>Stress Level:</strong> ${stress}/10</p>
+                            <p><strong>Sleep Quality:</strong> ${sleep}/10</p>
+                            <p><strong>Current Mood:</strong> ${mood}</p>
+                            <h4>Recommendations:</h4>
+                            <ul>
+                                <li>Practice mindfulness meditation for 10 minutes daily</li>
+                                <li>Try deep breathing exercises when feeling stressed</li>
+                                <li>Schedule regular family activities to improve mood</li>
+                                <li>Ensure 7-8 hours of sleep each night</li>
+                                <li>Consider speaking with a mental health professional if needed</li>
+                            </ul>
+                        </div>
+                    `;
+
+                    wellnessResult.innerHTML = recommendations;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

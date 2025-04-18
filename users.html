@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Groups | Family Health Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Family Health Platform">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="users.html" class="active">User Groups</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero users-hero">
+        <div class="container">
+            <h1>Who We Serve</h1>
+            <p>Comprehensive health solutions for every family member</p>
+        </div>
+    </section>
+
+    <!-- User Groups Section -->
+    <section class="user-groups-detail">
+        <div class="container">
+            <div class="user-group-tabs">
+                <button class="tab-btn active" data-group="working-parents">Working Parents</button>
+                <button class="tab-btn" data-group="new-mothers">New Mothers</button>
+                <button class="tab-btn" data-group="senior-families">Senior Families</button>
+            </div>
+
+            <!-- Working Parents Content -->
+            <div class="user-group-content active" id="working-parents">
+                <div class="user-group-header">
+                    <h2>Working Parents</h2>
+                    <p>Time-constrained parents need to manage family health efficiently</p>
+                </div>
+                <div class="user-group-content-grid">
+                    <div class="user-group-text">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>Busy schedules with conflicting priorities</li>
+                            <li>Limited time for meal planning and preparation</li>
+                            <li>Difficulty finding fitness routines that fit into busy days</li>
+                            <li>Struggling to balance individual and family health needs</li>
+                        </ul>
+                        <h3>Our Solutions</h3>
+                        <ul>
+                            <li>AI-generated weekly health plans that sync with family calendars</li>
+                            <li>Quick, healthy meal recipes that can be prepared in under 30 minutes</li>
+                            <li>Family fitness challenges that can be done together or individually</li>
+                            <li>Shared health dashboard to track progress across all family members</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="user-group-image">
+                        <img src="images/working-parents.jpg" alt="Working Parents">
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Mothers Content -->
+            <div class="user-group-content" id="new-mothers">
+                <div class="user-group-header">
+                    <h2>New Mothers</h2>
+                    <p>Support for postpartum recovery and infant nutrition</p>
+                </div>
+                <div class="user-group-content-grid">
+                    <div class="user-group-text">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>Postpartum recovery and body changes</li>
+                            <li>Managing infant nutrition and feeding schedules</li>
+                            <li>Anxiety and stress related to new motherhood</li>
+                            <li>Lack of expert guidance during the transition</li>
+                        </ul>
+                        <h3>Our Solutions</h3>
+                        <ul>
+                            <li>Postpartum fitness programs designed by experts</li>
+                            <li>Comprehensive infant nutrition management tools</li>
+                            <li>Access to mental health resources and support communities</li>
+                            <li>Baby food database with age-appropriate recipes</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="user-group-image">
+                        <img src="images/new-mothers.jpg" alt="New Mothers">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Senior Families Content -->
+            <div class="user-group-content" id="senior-families">
+                <div class="user-group-header">
+                    <h2>Senior Families</h2>
+                    <p>Chronic disease prevention and age-friendly wellness</p>
+                </div>
+                <div class="user-group-content-grid">
+                    <div class="user-group-text">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>Managing chronic conditions like diabetes and arthritis</li>
+                            <li>Finding low-impact exercise options</li>
+                            <li>Navigating complex medication schedules</li>
+                            <li>Overwhelmed by generic health content</li>
+                        </ul>
+                        <h3>Our Solutions</h3>
+                        <ul>
+                            <li>Arthritis-friendly yoga tutorials and gentle exercise routines</li>
+                            <li>Custom meal plans for chronic disease management</li>
+                            <li>Medication reminder system with family notifications</li>
+                            <li>Educational resources tailored to senior health needs</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="user-group-image">
+                        <img src="images/senior-families.jpg" alt="Senior Families">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-detail">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a working parent, I was struggling to keep up with my family's health needs. This platform has been a lifesaver! The AI-generated plans fit perfectly with our busy schedule."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="User 1">
+                        <div class="author-info">
+                            <h4>David Wilson</h4>
+                            <p>Working Parent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The postpartum fitness programs helped me recover much faster than I expected. The baby food database has been invaluable for planning meals for my growing infant."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="User 2">
+                        <div class="author-info">
+                            <h4>Emma Thompson</h4>
+                            <p>New Mother</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"My elderly parents have benefited tremendously from the arthritis-friendly yoga tutorials and medication reminder system. It's given me peace of mind knowing their health is well-managed."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="User 3">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Senior Family Caregiver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/story1.jpg" alt="Success Story 1">
+                    </div>
+                    <div class="story-content">
+                        <h3>The Johnson Family</h3>
+                        <p>How a busy family of five transformed their health in just 3 months using our platform.</p>
+                        <a href="#" class="read-more">Read Story</a>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/story2.jpg" alt="Success Story 2">
+                    </div>
+                    <div class="story-content">
+                        <h3>Sarah's Journey</h3>
+                        <p>A new mother's experience with postpartum recovery and infant nutrition management.</p>
+                        <a href="#" class="read-more">Read Story</a>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/story3.jpg" alt="Success Story 3">
+                    </div>
+                    <div class="story-content">
+                        <h3>The Rodriguez Family</h3>
+                        <p>How grandparents and parents worked together to improve senior health outcomes.</p>
+                        <a href="#" class="read-more">Read Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Family Health Platform">
+                    </div>
+                    <p>Empowering families to achieve holistic wellness together.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="users.html">User Groups</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and wellness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Family Health Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

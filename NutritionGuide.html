@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Nutrition Guide | Family Health Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Family Health Platform">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="users.html">User Groups</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Family Nutrition Guide</h1>
+            <p>Create balanced meal plans for your family</p>
+        </div>
+    </section>
+
+    <!-- Nutrition Guide Form -->
+    <section class="nutrition-guide">
+        <div class="container">
+            <h2 class="section-title">Generate Your Nutrition Guide</h2>
+            <div class="nutrition-form">
+                <form id="nutritionForm">
+                    <div class="form-group">
+                        <label for="family-size">Family Size</label>
+                        <input type="number" id="family-size" name="family-size" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietary-restrictions">Dietary Restrictions</label>
+                        <select id="dietary-restrictions" name="dietary-restrictions">
+                            <option value="">Select Restrictions</option>
+                            <option value="none">None</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="dairy-free">Dairy-Free</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="favorite-foods">Favorite Foods (comma-separated)</label>
+                        <input type="text" id="favorite-foods" name="favorite-foods">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate Guide</button>
+                </form>
+            </div>
+            <div class="nutrition-result" id="nutritionResult">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Family Health Platform">
+                    </div>
+                    <p>Empowering families to achieve holistic wellness together.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="users.html">User Groups</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and wellness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Family Health Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nutritionForm = document.getElementById('nutritionForm');
+            const nutritionResult = document.getElementById('nutritionResult');
+
+            if (nutritionForm) {
+                nutritionForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const familySize = document.getElementById('family-size').value;
+                    const dietaryRestrictions = document.getElementById('dietary-restrictions').value;
+                    const favoriteFoods = document.getElementById('favorite-foods').value;
+
+                    // Simple logic to generate a nutrition guide
+                    let guide = `
+                        <div class="result-card">
+                            <h3>Your Family Nutrition Guide</h3>
+                            <p><strong>Family Size:</strong> ${familySize}</p>
+                            <p><strong>Dietary Restrictions:</strong> ${dietaryRestrictions}</p>
+                            <p><strong>Favorite Foods:</strong> ${favoriteFoods}</p>
+                            <h4>Sample Meal Plan:</h4>
+                            <ul>
+                                <li><strong>Breakfast:</strong> Oatmeal with fruits and nuts</li>
+                                <li><strong>Lunch:</strong> Grilled chicken salad</li>
+                                <li><strong>Dinner:</strong> Baked salmon with vegetables</li>
+                                <li><strong>Snacks:</strong> Greek yogurt and berries</li>
+                            </ul>
+                        </div>
+                    `;
+
+                    nutritionResult.innerHTML = guide;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
